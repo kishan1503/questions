@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int ans(int a[],int n)
+{
+    if(n==0)
+    {
+        return -1;
+    }
+    if(n==1)
+    {4
+        return 1;
+    }
+    int add=ans(a+1,n-1);
+    return add+a[0];
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int ans=sum(a,n);
+    cout<<ans;
+}
